@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Counter.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 /** Component for Counter page.
  *
@@ -43,7 +43,9 @@ function Counter() {
                 onClick={resetCount}>
                 Start Over
             </button>
-            <Board />
+            <Link to="/board" className="btn btn-success">
+                Go to Board
+            </Link>
             </div>
             : "keep clicking to go down the rabbit hole..."}
             </p>
