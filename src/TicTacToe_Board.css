@@ -1,9 +1,24 @@
-.TicTacToe-board-row {
-  clear: both;
-  content: '';
-  display: table;
+.TicTacToe-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.TicTacToe-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .TicTacToe-board-status {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: calc(10px + 2vmin);
+  color: goldenrod;
+  text-align: center;
+}
+
+.TicTacToe-board-row {
+  display: flex;
 }
