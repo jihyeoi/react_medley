@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import logo from './logo.svg'
 import './Counter.css';
-
+import {Link} from 'react-router-dom';
 
 /** Component for Counter page.
  *
@@ -38,12 +37,15 @@ function Counter() {
             </p>
             <p>
             {count >= 10
-            ? <button
+            ? <div>
+                <button
                 className="btn btn-warning"
                 onClick={resetCount}>
                 Start Over
             </button>
-            : "Keep Clicking!"}
+            <Board />
+            </div>
+            : "keep clicking to go down the rabbit hole..."}
             </p>
         </main>
         </div>

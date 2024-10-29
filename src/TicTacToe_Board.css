@@ -1,0 +1,9 @@
+.TicTacToe-board-row {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.TicTacToe-board-status {
+  margin-bottom: 10px;
+}

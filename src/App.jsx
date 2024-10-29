@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import logo from './logo.svg'
 import Counter from './Counter';
-
+import Board from './TicTacToe_Board';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 /** Component for entire page.
  *
@@ -13,9 +12,12 @@ import Counter from './Counter';
 function App() {
 
   return (
-    <div>
-      <Counter />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Counter />} />
+        <Route path="/board" element={<Board />} />
+      </Routes>
+    </Router>
   );
 };
 
