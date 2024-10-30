@@ -30,7 +30,7 @@ function Counter() {
             </h1>
             <p>
             <button
-                className="btn btn-info"
+                className="btn btn-warning"
                 onClick={incrCount}>
                 Clicked: {count}
             </button>
@@ -39,12 +39,12 @@ function Counter() {
             {count >= 10
             ? <div>
                 <button
-                className="btn btn-warning"
+                className="btn btn-danger"
                 onClick={resetCount}>
-                Start Over
+                Red Pill
             </button>
-            <Link to="/board" className="btn btn-success">
-                Go to Board
+            <Link to="/board" className="btn btn-primary">
+                Blue Pill
             </Link>
             </div>
             : "keep clicking to go down the rabbit hole..."}

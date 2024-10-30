@@ -27,7 +27,7 @@ export default function Board() {
     let status;
 
     if (winner) {
-        status = winner + " won! Start over?";
+        status = winner + " won!";
     } else {
         status = "Next Player: " + (xIsNext ? "X" : "O");
     }
@@ -59,13 +59,7 @@ export default function Board() {
         <div className="TicTacToe-game">
             <div className="TicTacToe-board">
                 <div className="TicTacToe-board-status">
-                    {winner
-                    ? <button
-                    className="btn btn-warning"
-                    onClick={resetBoard}>
                     {status}
-                    </button>
-                    : status}
                 </div>
                 <div className="TicTacToe-board-row">
                     <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -81,6 +75,22 @@ export default function Board() {
                     <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
                     <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                     <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+                </div>
+                <div className="TicTacToe-board-status">
+                    {winner
+                    ? <div>
+                    <button
+                    className="btn btn-primary pill"
+                    onClick={resetBoard}>
+                    Blue Pill
+                    </button>
+                    <button
+                    className="btn btn-danger pill"
+                    onClick={resetBoard}>
+                    Red Pill
+                    </button>
+                    </div>
+                    : ":)"}
                 </div>
             </div>
         </div>

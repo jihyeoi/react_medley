@@ -22,3 +22,8 @@
 .TicTacToe-board-row {
   display: flex;
 }
+
+.pill {
+  margin: 10px !important;
+  padding: 10px;
+}
