@@ -1,6 +1,24 @@
-.Eightball {
-  box-shadow: 5px 5px 10px #678;
-  margin: 50px;
+/* Ensures full height and no body margin */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centering container */
+.EightBall-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Ensures full viewport width */
+  margin: 0;
+}
+
+/* Centered EightBall */
+.EightBall {
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -11,4 +29,5 @@
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  background-color: black;
 }
