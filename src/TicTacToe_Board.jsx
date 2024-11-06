@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Square from "./TicTacToe_Square";
 import './TicTacToe_Board.css';
 
@@ -21,6 +22,10 @@ export default function Board() {
 
     function resetBoard() {
         setSquares(Array(9).fill(null));
+    }
+
+    function goToEightball() {
+        Navigate("/eightball");
     }
 
     const winner = calculateWinner(squares);
@@ -81,7 +86,7 @@ export default function Board() {
                     ? <div>
                     <button
                     className="btn btn-primary pill"
-                    onClick={resetBoard}>
+                    onClick={goToEightball}>
                     Blue Pill
                     </button>
                     <button
@@ -90,7 +95,7 @@ export default function Board() {
                     Red Pill
                     </button>
                     </div>
-                    : ":)"}
+                    : "are you x or o..."}
                 </div>
             </div>
         </div>
